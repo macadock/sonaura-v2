@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    serverActions: true,
+module.exports = {
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        hostname: 'omzwibopitojmqdieuml.supabase.co',
+      },
+    ],
   },
-}
-
-module.exports = nextConfig
+};

@@ -1,0 +1,54 @@
+{
+  "new": {
+    "title": "Produits mis en avant",
+    "subtitle": "produits",
+    "description": "Vivez une expérience audiovisuelle comme jamais auparavant."
+  },
+  "hero": {
+    "title": "Vivez une expérience audiovisuelle comme jamais auparavant",
+    "video": {
+      "url": "https://omzwibopitojmqdieuml.supabase.co/storage/v1/object/public/marketing/home_video",
+      "poster": "https://omzwibopitojmqdieuml.supabase.co/storage/v1/object/public/marketing/installations_hero"
+    },
+    "button": {
+      "href": "#products",
+      "label": "Découvrez nos produits"
+    },
+    "subtitle": "Nous vous aidons à trouver la solution adaptée à vos besoins."
+  },
+  "people": {
+    "title": "Passionnés",
+    "images": [
+      {
+        "alt": "Gérant Lyon",
+        "url": "https://omzwibopitojmqdieuml.supabase.co/storage/v1/object/public/marketing/gerant_lyon"
+      },
+      {
+        "alt": "Gérant Grenoble",
+        "url": "https://omzwibopitojmqdieuml.supabase.co/storage/v1/object/public/marketing/gerant_grenoble"
+      }
+    ],
+    "subtitle": "Vos boutiques de Lyon et Grenoble sont gérées par des passionnés qui sont présents pour partager leur passion Bang & Olufsen et leur savoir-faire."
+  },
+  "advices": {
+    "image": {
+      "alt": "Banner",
+      "url": "https://omzwibopitojmqdieuml.supabase.co/storage/v1/object/public/marketing/banner_image"
+    },
+    "title": "Laissez-vous guider.",
+    "button": {
+      "href": "/contact",
+      "label": "Contactez nos magasins"
+    },
+    "subtitle": "Toutes nos équipes vous conseillent les produits Bang & Olufsen qui répondront à vos besoins."
+  },
+  "preOwned": {
+    "title": "Produits d'occasion",
+    "subtitle": "occasions",
+    "description": "Prolongez la vie de produits Bang & Olufsen tout en vous faisant plaisir."
+  },
+  "categories": {
+    "title": "Catégories",
+    "subtitle": "Explorez nos produits"
+  }
+}
