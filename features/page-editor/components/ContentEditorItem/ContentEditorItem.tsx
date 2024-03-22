@@ -38,13 +38,13 @@ export const ContentEditorItem = ({
   isLast,
 }: ContentEditorItem) => {
   const formMethods = useForm({
-    resolver: zodResolver(schema),
+    resolver: schema ? zodResolver(schema) : undefined,
     defaultValues,
   });
 
   const DisplayedComponent = getComponent(name);
 
-  const inputsArray = getInputs({ schema });
+  const inputsArray = schema ? getInputs({ schema }) : [];
 
   const values = formMethods.watch();
 

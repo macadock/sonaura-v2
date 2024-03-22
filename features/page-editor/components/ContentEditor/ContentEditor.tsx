@@ -51,7 +51,7 @@ export const ContentEditor = ({
       defaultValues: {
         title: pageData.title,
         slug: pageData.slug,
-        class: pageData.content?.class || '',
+        class: (pageData.content as unknown as { class?: string })?.class || '',
       },
     });
   const handleUpdatePageInformation: SubmitHandler<

@@ -16,8 +16,7 @@ import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { Installation } from '@/utils/data';
 import isEqual from 'lodash/isEqual';
-
-const BUCKET_NAME = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME as string;
+import { BUCKET_NAME } from '@/features/config';
 
 export type InstallationFormProps = {
   installation?: Installation;
@@ -49,10 +48,10 @@ export const InstallationForm = ({ installation }: InstallationFormProps) => {
 
     const { data, error } = await supabase.storage
       .from(BUCKET_NAME)
-      .download(installation.image?.file);
+      .download(installation.image as string);
 
     if (data) {
-      setValue('image', new File([data], installation.image?.file));
+      setValue('image', new File([data], installation.image as string));
     }
   };
 
@@ -65,7 +64,7 @@ export const InstallationForm = ({ installation }: InstallationFormProps) => {
 
     const isImageEqual = isEqual(
       formData.image.name,
-      installation?.image?.file,
+      installation?.image as string,
     );
 
     const image = isImageUpdated

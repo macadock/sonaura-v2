@@ -1,3 +1,4 @@
+'use server';
 import { PropsNameEnum } from '@/features/page-editor';
 import { installations } from '@/app/(marketing)/mocks';
 import Image from 'next/image';
@@ -6,13 +7,12 @@ import './installations-grid.css';
 import { Installation } from '@/utils/data';
 import { cookies } from 'next/headers';
 import { createClient } from '@/lib/supabase/server';
+import { BUCKET_NAME } from '@/features/config';
 
 export type InstallationsGridProps = {
   [PropsNameEnum.INSTALLATIONS]: Array<Installation>;
   isPreview?: boolean;
 };
-
-const BUCKET_NAME = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME as string;
 
 export const InstallationsGrid = ({
   installations,

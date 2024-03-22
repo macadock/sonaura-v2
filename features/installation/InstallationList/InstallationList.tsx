@@ -14,7 +14,7 @@ import { Edit } from 'lucide-react';
 
 export const InstallationList = async () => {
   const cookieStore = cookies();
-  const installations = await getInstallations(cookieStore);
+  const installations = await getInstallations({ cookieStore });
 
   if (!installations) {
     return null;

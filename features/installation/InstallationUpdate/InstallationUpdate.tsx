@@ -12,8 +12,6 @@ export type InstallationUpdateProps = {
   id: string;
 };
 
-const BUCKET_NAME = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME as string;
-
 export const InstallationUpdate = async ({ id }: InstallationUpdateProps) => {
   if (!id) {
     redirect('/dashboard/installations');
