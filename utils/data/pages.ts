@@ -1,13 +1,18 @@
 import { Database } from '@/types/supabase';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import type { cookies } from 'next/headers';
+import isEmpty from 'lodash/isEmpty';
 
-export const getPage = (
-  slug: string,
-  cookieStore: ReturnType<typeof cookies>,
-) => {
+export const getPage = async ({
+  url,
+  cookieStore,
+}: {
+  url: string;
+  cookieStore: ReturnType<typeof cookies>;
+}) => {
   const supabase = createClient(cookieStore);
-  return supabase.from('pages').select('*').eq('slug', slug).limit(1).single();
+
+  return supabase.from('pages').select('*').eq('slug', url).limit(1).single();
 };
 
 export const getPages = (cookieStore: ReturnType<typeof cookies>) => {

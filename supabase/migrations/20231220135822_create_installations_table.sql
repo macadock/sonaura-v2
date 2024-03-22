@@ -4,7 +4,7 @@ installations (
     title text not null,
     description text not null,
     image jsonb not null,
-    product_id uuid references products(id) not null,
+    product_id uuid references products(id),
     created_at timestamp with time zone not null default now(),
     updated_at timestamp with time zone not null default now()
 );

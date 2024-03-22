@@ -1,8 +1,8 @@
-import { Item } from '@/components/Header';
-import { DesktopMenu } from '@/components/Header/DesktopMenu';
-import { LogoutButton } from '@/components/LogoutButton';
+import { Item } from '@/components/common/Header';
+import { DesktopMenu } from '@/components/common/Header/DesktopMenu';
+import { LogoutButton } from '@/components/common';
 
-import { Roles, getUser, getUserRole } from '@/utils/supabase/server';
+import { Roles, getUser, getUserRole } from '@/lib/supabase/server';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
@@ -13,6 +13,16 @@ const Items: Item[] = [
   {
     href: '/dashboard/contact',
     title: 'Contact',
+    type: 'page',
+  },
+  {
+    href: '/dashboard/contents',
+    title: 'Contenus',
+    type: 'page',
+  },
+  {
+    href: '/dashboard/installations',
+    title: 'Réalisations',
     type: 'page',
   },
   {
@@ -43,18 +53,8 @@ const Items: Item[] = [
         type: 'page',
       },
       {
-        href: '/dashboard/settings/installations',
-        title: 'Réalisations',
-        type: 'page',
-      },
-      {
         href: '/dashboard/settings/shops',
         title: 'Magasins',
-        type: 'page',
-      },
-      {
-        href: '/dashboard/settings/contents',
-        title: 'Contenus',
         type: 'page',
       },
     ],

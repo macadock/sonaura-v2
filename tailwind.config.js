@@ -2,10 +2,9 @@
 module.exports = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './features/**/*.{ts,tsx}',
   ],
   prefix: '',
   theme: {
@@ -73,6 +72,14 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
+      },
+      maxHeight: {
+        fullPageWithoutHeader: 'var(--fullPageHeightWithoutHeader)',
+        halfPageWithoutHeader: 'var(--halfPageHeightWithoutHeader)',
+      },
+      height: {
+        fullPageWithoutHeader: 'var(--fullPageHeightWithoutHeader)',
+        halfPageWithoutHeader: 'var(--halfPageHeightWithoutHeader)',
       },
     },
   },

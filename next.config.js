@@ -6,6 +6,9 @@ module.exports = {
       {
         hostname: 'omzwibopitojmqdieuml.supabase.co',
       },
+      {
+        hostname: 'localhost',
+      },
     ],
   },
 };

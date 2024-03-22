@@ -1,6 +1,6 @@
 'use server';
 
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import { getUrl } from '@/utils/url';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -24,8 +24,8 @@ export const handleSignUp = async (formData: FormData) => {
   });
 
   if (error) {
-    return redirect("/login?message=Erreur lors de l'inscription");
+    redirect("/login?message=Erreur lors de l'inscription");
   }
 
-  return redirect('/login?message=Vérifiez vos emails pour continuer');
+  redirect('/login?message=Vérifiez vos emails pour continuer');
 };

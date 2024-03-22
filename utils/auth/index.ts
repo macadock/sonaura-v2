@@ -1,4 +1,4 @@
-export * from './redirect-homepage';
-export * from './sign-in';
-export * from './sign-out';
-export * from './sign-up';
+export { redirectUserToPage } from './redirect-homepage';
+export { handleSignIn } from './sign-in';
+export { handleSignOut } from './sign-out';
+export { handleSignUp } from './sign-up';

@@ -140,7 +140,7 @@ export interface Database {
           description: string
           id: string
           image: Json
-          product_id: string
+          product_id: string | null
           title: string
           updated_at: string
         }
@@ -149,7 +149,7 @@ export interface Database {
           description: string
           id?: string
           image: Json
-          product_id: string
+          product_id?: string | null
           title: string
           updated_at?: string
         }
@@ -158,7 +158,7 @@ export interface Database {
           description?: string
           id?: string
           image?: Json
-          product_id?: string
+          product_id?: string | null
           title?: string
           updated_at?: string
         }
@@ -182,7 +182,7 @@ export interface Database {
           updated_at: string
         }
         Insert: {
-          content: Json
+          content?: Json
           created_at?: string
           id?: string
           slug: string

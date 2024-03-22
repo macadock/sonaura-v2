@@ -1,9 +1,8 @@
-create table 
 pages (
     id uuid primary key not null default gen_random_uuid(),
     title text not null,
     slug text not null UNIQUE,
-    content jsonb not null,
+    content jsonb not null default [],
     created_at timestamp with time zone not null default now(),
     updated_at timestamp with time zone not null default now()
 );

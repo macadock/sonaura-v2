@@ -1,5 +1,5 @@
 import { Database } from '@/types/supabase';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import type { cookies } from 'next/headers';
 
 export const getContacts = (cookieStore: ReturnType<typeof cookies>) => {

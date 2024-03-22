@@ -4,6 +4,8 @@
 
 :root {
   --headerHeight: 6rem;
+  --fullPageHeightWithoutHeader: calc(100vh - var(--headerHeight));
+  --halfPageHeightWithoutHeader: calc((100vh - var(--headerHeight)) / 2)
 }
 
 @layer base {

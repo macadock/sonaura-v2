@@ -1,7 +1,7 @@
 'use server';
 
 import { redirectUserToPage } from '@/utils/auth/redirect-homepage';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
@@ -19,8 +19,8 @@ export const handleSignIn = async (formData: FormData) => {
   });
 
   if (error) {
-    return redirect('/login?message=Identifiants invalides');
+    redirect('/login?message=Identifiants invalides');
   }
 
-  redirectUserToPage();
+  await redirectUserToPage();
 };

@@ -1,6 +1,6 @@
 'use server';
 
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/lib/supabase/server';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
@@ -22,9 +22,10 @@ export const redirectUserToPage = async () => {
 
   switch (user.role) {
     case 'ADMIN':
-      return redirect('/dashboard');
+      redirect('/dashboard');
+      break;
 
     default:
-      return redirect('/');
+      redirect('/');
   }
 };
