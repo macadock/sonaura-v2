@@ -20,6 +20,7 @@ export default async function Login({
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           name="email"
+          autoComplete={'email'}
           required
         />
         <label className="text-md" htmlFor="password">
@@ -29,6 +30,7 @@ export default async function Login({
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           type="password"
           name="password"
+          autoComplete={'current-password'}
           required
         />
         <Button type="submit">Se connecter</Button>
